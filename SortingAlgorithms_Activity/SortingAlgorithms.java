@@ -52,4 +52,35 @@ public class SortingAlgorithms {
             arr[j + 1] = key;
         }
     }
+    public static void main(String[] args) {
+
+        int[] originalArray = {
+            45, 12, 89, 23, 5,
+            67, 34, 90, 10, 56
+        };
+
+        int[] bubbleArray =
+            Arrays.copyOf(originalArray, originalArray.length);
+
+        int[] selectionArray =
+            Arrays.copyOf(originalArray, originalArray.length);
+
+        int[] insertionArray =
+            Arrays.copyOf(originalArray, originalArray.length);
+
+        System.out.println("Original Array: "
+                + Arrays.toString(originalArray));
+
+        bubbleSort(bubbleArray);
+        System.out.println("Bubble Sort: "
+                + Arrays.toString(bubbleArray));
+
+        selectionSort(selectionArray);
+        System.out.println("Selection Sort: "
+                + Arrays.toString(selectionArray));
+
+        insertionSort(insertionArray);
+        System.out.println("Insertion Sort: "
+                + Arrays.toString(insertionArray));
+    }
 }
